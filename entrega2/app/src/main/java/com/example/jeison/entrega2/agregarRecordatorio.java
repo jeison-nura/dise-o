@@ -4,8 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class agregarRecordatorio extends AppCompatActivity {
 
@@ -67,5 +71,32 @@ public class agregarRecordatorio extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+        //Primer Spinner
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+
+        ArrayList<String> values = new ArrayList<String>();
+        for (int i=1;i<=10;i++){
+            values.add("Recordatorio " + i);
+        }
+
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(dataAdapter);
+
+        //Segundo Spinner
+        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
+
+        ArrayList<String> values2 = new ArrayList<String>();
+        for (int i=1;i<=10;i++){
+            values2.add("Cra " + i + " # " + i+13);
+        }
+
+
+        ArrayAdapter<String> dataAdapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values2);
+        dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner2.setAdapter(dataAdapter2);
     }
 }

@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
 
 public class añadirEtiqueta extends AppCompatActivity {
 
@@ -45,6 +49,18 @@ public class añadirEtiqueta extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+
+        ArrayList<String> values = new ArrayList<String>();
+        for (int i=1;i<=10;i++){
+            values.add("Color: " + i);
+        }
+
+
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, values);
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(dataAdapter);
 
     }
 }
