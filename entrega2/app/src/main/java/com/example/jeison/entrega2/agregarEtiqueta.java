@@ -1,29 +1,40 @@
 package com.example.jeison.entrega2;
 
-import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class agregarEtiqueta extends AppCompatActivity {
 
     private ImageView botonAgregarR,botonRecuperarR,botonOlvidarR;
-    private Context context;
+    private Button agregarEtiqueta;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        context = getApplicationContext();
+        setContentView(R.layout.agregar_etiqueta);
+
+        agregarEtiqueta = findViewById(R.id.add_eti);
+
+        agregarEtiqueta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(agregarEtiqueta.this,añadirEtiqueta.class);
+                startActivity(i);
+            }
+        });
+
 
         botonAgregarR = findViewById(R.id.botonAgregarRec);
 
         botonAgregarR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, agregarRecordatorio.class);
+                Intent i = new Intent(agregarEtiqueta.this, agregarRecordatorio.class);
                 startActivity(i);
             }
         });
@@ -33,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         botonRecuperarR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, recuperarRecordatorio.class);
+                Intent i = new Intent(agregarEtiqueta.this, recuperarRecordatorio.class);
                 startActivity(i);
             }
         });
@@ -43,11 +54,9 @@ public class MainActivity extends AppCompatActivity {
         botonOlvidarR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, olvidarRecordatorio.class);
+                Intent i = new Intent(agregarEtiqueta.this, olvidarRecordatorio.class);
                 startActivity(i);
             }
         });
     }
-
-
 }

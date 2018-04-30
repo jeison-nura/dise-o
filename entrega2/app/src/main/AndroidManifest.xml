@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".agregarRecordatorio">
+        </activity>
+        <activity android:name=".agregarEtiqueta">
+        </activity>
+        <activity android:name=".añadirEtiqueta">
+        </activity>
+        <activity android:name=".mapa">
+        </activity>
+        <activity android:name=".olvidarRecordatorio">
+        </activity>
+        <activity android:name=".recuperarRecordatorio">
+        </activity>
     </application>
 
 </manifest>
