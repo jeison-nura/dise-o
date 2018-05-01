@@ -1,69 +1,51 @@
 package com.example.jeison.entrega2;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.bumptech.glide.Glide;
-import com.example.jeison.entrega2.R;
-import com.example.jeison.entrega2.Reminder;
 
 import java.util.List;
 
-public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyViewHolder> {
+/**
+ * Created by jorge_000 on 1/05/2018.
+ */
 
+public class TagAdapter extends RecyclerView.Adapter<TagAdapter.MyViewHolder>{
     private Context mContext;
-    private List<Reminder> reminderList;
+    private List<Tag> tagList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title;
         private View elementView;
 
-
-
         public MyViewHolder(View view) {
             super(view);
-            title = (TextView) view.findViewById(R.id.info);
+            title = (TextView) view.findViewById(R.id.infoTag);
             elementView = view;
         }
     }
 
 
-    public ReminderAdapter(Context mContext, List<Reminder> reminderList) {
+    public TagAdapter(Context mContext, List<Tag> tagList) {
         this.mContext = mContext;
-        this.reminderList = reminderList;
+        this.tagList = tagList;
     }
-
-
-    //@Override
-    //public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-    //    View itemView = LayoutInflater.from(parent.getContext())
-    //            .inflate(R.layout.reminder_card, parent, false);
-    //
-    //    return new MyViewHolder(itemView);
-    //}
 
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.reminder_r_view,null,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.tag_r_view,null,false);
 
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        final Reminder reminder = reminderList.get(position);
+        final Tag tag = tagList.get(position);
 
         holder.elementView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,12 +58,12 @@ public class ReminderAdapter extends RecyclerView.Adapter<ReminderAdapter.MyView
                 //mContext.startActivity(intent);
             }
         });
-        holder.title.setText(reminder.getName());
+        holder.title.setText(tag.getName());
 
     }
 
     @Override
     public int getItemCount() {
-        return reminderList.size();
+        return tagList.size();
     }
 }

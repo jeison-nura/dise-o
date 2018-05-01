@@ -1,14 +1,22 @@
 package com.example.jeison.entrega2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class añadirEtiqueta extends AppCompatActivity {
 
@@ -19,6 +27,7 @@ public class añadirEtiqueta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aniadir_etiqueta);
+
 
         botonAgregarR = findViewById(R.id.botonAgregarRec);
 
@@ -63,4 +72,5 @@ public class añadirEtiqueta extends AppCompatActivity {
         spinner.setAdapter(dataAdapter);
 
     }
+
 }
