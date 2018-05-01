@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
+        recyclerView.setAdapter(adapter);
         prepareInfo();
 
         context = getApplicationContext();
@@ -90,6 +90,30 @@ public class MainActivity extends AppCompatActivity {
         reminderList.add(re);
 
         re = new Reminder("Recordarotio 3");
+        reminderList.add(re);
+
+        re = new Reminder("Recordarotio 4");
+        reminderList.add(re);
+
+        re = new Reminder("Recordarotio 5");
+        reminderList.add(re);
+
+        re = new Reminder("Recordarotio 6");
+        reminderList.add(re);
+
+        re = new Reminder("Recordarotio 7");
+        reminderList.add(re);
+
+        re = new Reminder("Recordarotio 8");
+        reminderList.add(re);
+
+        re = new Reminder("Recordarotio 9");
+        reminderList.add(re);
+
+        re = new Reminder("Recordarotio 10");
+        reminderList.add(re);
+
+        re = new Reminder("Recordarotio 11");
         reminderList.add(re);
 
         adapter.notifyDataSetChanged();
