@@ -42,37 +42,6 @@ public class agregarRecordatorio extends AppCompatActivity {
             }
         });
 
-        botonAgregarR = findViewById(R.id.botonAgregarRec);
-
-        botonAgregarR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(agregarRecordatorio.this, agregarRecordatorio.class);
-                startActivity(i);
-            }
-        });
-
-        botonRecuperarR = findViewById(R.id.botonRecuperarRec);
-
-        botonRecuperarR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(agregarRecordatorio.this, recuperarRecordatorio.class);
-                startActivity(i);
-            }
-        });
-
-        botonOlvidarR = findViewById(R.id.botonOlvidarRec);
-
-        botonOlvidarR.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(agregarRecordatorio.this, olvidarRecordatorio.class);
-                startActivity(i);
-            }
-        });
-
-
         //Primer Spinner
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
