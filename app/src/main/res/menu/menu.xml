@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
     <item android:id="@+id/action_menu_1"
-        android:title="Recuperar recordatorio"></item>
+        android:title="Mapa"></item>
     <item android:id="@+id/action_menu_2"
         android:title="Etiquetas"></item>
     <item android:id="@+id/action_menu_3"

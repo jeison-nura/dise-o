@@ -86,7 +86,7 @@ public class recuperarRecordatorio extends AppCompatActivity {
 
         re = new Reminder("Recordarotio 3");
         reminderList.add(re);
-        
+
         adapter.notifyDataSetChanged();
     }
 

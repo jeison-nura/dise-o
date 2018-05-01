@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         int id=option_menu.getItemId();
 
         if (id==R.id.action_menu_1){
-            Intent intent = new Intent(MainActivity.this, recuperarRecordatorio.class);
+            Intent intent = new Intent(MainActivity.this, mapa.class);
             startActivity(intent);
         }
         if (id==R.id.action_menu_2){
