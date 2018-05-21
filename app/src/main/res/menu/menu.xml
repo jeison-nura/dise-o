@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item android:id="@+id/action_menu_1"
+        android:title="Etiquetas"></item>
+    <item android:id="@+id/action_menu_2"
+        android:title="Mapa"></item>
+    <item android:id="@+id/action_menu_3"
+          android:title="Configuracion"></item>
+    <!--<item android:id="@+id/action_menu_4"
+          android:title="Acerda de"></item>-->
+    <item android:id="@+id/action_menu_5"
+        android:title="Desarrolladores"></item>
+
+</menu>
