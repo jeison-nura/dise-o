@@ -3,22 +3,38 @@ package com.example.jeison.entrega2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class añadirEtiqueta extends AppCompatActivity {
 
     private ImageView botonAgregarR,botonRecuperarR,botonOlvidarR;
+    private Button botonAgregarEtiqueta;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.aniadir_etiqueta);
+
+        botonAgregarEtiqueta = findViewById(R.id.button2);
+
+        botonAgregarEtiqueta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast toast1 =
+                Toast.makeText(getApplicationContext(),"Etiqueta agregada",Toast.LENGTH_SHORT);
+                toast1.setGravity(Gravity.CENTER,0,0);
+                toast1.show();
+            }
+        });
 
         botonAgregarR = findViewById(R.id.botonAgregarRec);
 
