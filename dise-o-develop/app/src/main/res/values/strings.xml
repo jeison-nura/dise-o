@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">remty</string>
+    <string name="title_developer_list">developers</string>
+    <string name="title_developer_detail">developer Detail</string>
+</resources>

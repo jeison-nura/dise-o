@@ -1,0 +1,4 @@
+#Sun Apr 29 20:41:54 COT 2018
+base.0=C\:\\Users\\Esteban\\Documents\\GitHub\\dise-o\\entrega2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex
